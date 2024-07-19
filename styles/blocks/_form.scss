@@ -1,0 +1,65 @@
+.form {
+    padding: 40px 0;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.151);
+    background-color: var(--color-light);
+
+    &__content {
+        display: flex;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 16px;
+        align-items: center;
+        column-gap: 20px;
+
+        @include tablet-s {
+            flex-direction: column;
+            max-width: 100%;
+            align-items: center;
+        }
+    }
+
+    &__inner {
+        @include tablet-s {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        input {
+            width: 280px;
+            height: 44px;
+            background-color: #F3F5F4;
+            border: transparent;
+            padding: 0 8px;
+        }
+
+        .div {
+            display: flex;
+            column-gap: 16px;
+            align-items: center;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: start;
+                row-gap: 16px;
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 10px 12px;
+    }
+}

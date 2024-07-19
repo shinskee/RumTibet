@@ -1,0 +1,14 @@
+.hero {
+    margin-top: auto;
+
+    &__title {
+        @include fluid-text(50, 28);
+
+        font-family: 'NEXTART';
+        color: var(--color-light);
+
+        @include tablet {
+            line-height: 1.5;
+        }
+    }
+}

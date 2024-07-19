@@ -1,0 +1,20 @@
+:root {
+    --container-width: 1180px;
+    --container-padding-x: 16px;
+    --section-padding-y: 80px;
+
+    @include tablet-s {
+        --section-padding-y: 50px;
+    }
+
+    --color-light: #FDFDFD;
+    --color-dark: #18121E;
+    --color-accent: #1A3E3E;
+    --color-gray: #F3F5F4;
+    --color-active: #F2BE22;
+
+    --border: 1px solid #1A3E3E;
+    --border-radius-small: 4px;
+    --border-radius: 32px;
+    --border-radius-large: 50px;
+}

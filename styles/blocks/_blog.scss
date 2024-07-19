@@ -1,0 +1,25 @@
+.blog {
+    text-align: center;
+
+    &__inner {
+        text-align: left;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        justify-content: space-between;
+        column-gap: 24px;
+        overflow-x: scroll;
+
+        @include laptop {
+            column-gap: 20px;
+            justify-content: center;
+        }
+        
+        @include tablet-s {
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+    }
+}

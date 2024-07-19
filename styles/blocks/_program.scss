@@ -1,0 +1,77 @@
+.program {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 120px;
+    align-self: center;
+
+    @include laptop {
+        column-gap: 80px;
+        padding-inline: 20px;
+    }
+
+    @include tablet-s {
+        flex-direction: column;
+    }
+
+    .section__inner {
+        width: 100%;
+        padding: 64px 0;
+
+        @include tablet-s {
+            padding: 0;
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+
+        @include tablet-s {
+            flex-direction: column;
+        }
+
+        &-wrapper {
+            display: flex;
+
+            @include tablet-s {
+                column-gap: 20px;
+                justify-content: center;
+            }
+
+            @include tablet {
+                column-gap: 10px;
+                overflow-x: scroll;
+                justify-content: start;
+            }
+        }
+
+        &-slide {
+            margin-bottom: auto;
+            width: 350px;
+            height: 400px;
+
+            &-2 {
+                cursor: pointer;
+                transform: translate(-65%, 25%);
+                transition: all 0.3s;
+
+                @include hover {
+                    opacity: 1;
+                }
+
+                @include tablet-s {
+                    transform: translate(0);
+                }
+            }
+
+            &-1 {
+                cursor: pointer;
+                opacity: 0.8;
+                transition: all 0.3s;
+
+                @include hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

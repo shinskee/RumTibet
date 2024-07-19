@@ -1,0 +1,47 @@
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.bg-gray {
+    background-color: var(--color-gray);
+}
+
+.bg-green {
+    background-color: var(--color-accent);
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.hidden-tablet {
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.hidden-laptop {
+    @include laptop {
+        display: none !important;
+    }
+}
+
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.visible-tablet {
+    @include tablet-above {
+        display: none !important;
+    }
+}

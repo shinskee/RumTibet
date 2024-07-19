@@ -1,0 +1,32 @@
+.header {
+    position: relative;
+    padding-top: 16px;
+    background: url('/src/bg.svg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-bottom: 50px;  
+    row-gap: 41px; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    @include tablet {
+        row-gap: 32px;
+    }
+
+    &__inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img {
+        @include laptop {
+            width: 84px;
+            height: 44px;
+        }
+    }
+}

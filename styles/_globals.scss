@@ -1,0 +1,87 @@
+h1, h2, h3, h4, h5 {
+    font-family: 'Nunito Sans';
+}
+
+h1 {
+    @include fluid-text(32, 24);
+}
+
+h2 {
+    @include fluid-text(24, 16);
+    color: var(--color-active);
+}
+
+h4 {
+    @include fluid-text(24, 16);
+    color: var(--color-light);
+    font-weight: bold;
+}
+
+body {
+    @include fluid-text(18, 16);
+
+    color: #18121E;
+    font-family: 'Nunito Sans';
+}
+
+.button-big {
+    @include reset-button;
+
+    height: 52px;
+    padding: 12px 24px;
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    border-radius: var(--border-radius-small);
+    font-weight: bold;
+    transition: all 0.3s;
+
+    @include hover {
+        border: var(--border);
+        color: var(--color-accent);
+        background-color: var(--color-light);
+    }
+}
+
+.button--finder {
+    @include fluid-text(18, 14);
+    @include reset-button;
+
+    height: 52px;
+    padding: 12px 24px;
+    background-color: var(--color-light);
+    color: var(--color-accent);
+    border-radius: var(--border-radius-small);
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    @include hover {
+        border: var(--border);
+        color: var(--color-light);
+        background-color: var(--color-accent);
+    }
+
+    @include tablet {
+        margin-left: 16px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    @include fluid-text(18, 14);
+    text-decoration: none;
+    color: var(--color-light);
+    font-family: 'Nunito Sans';
+    transition: color .3s;
+
+    @include hover {
+        color: var(--color-active);
+    }
+}
+
+.lock {
+    overflow: hidden;
+}

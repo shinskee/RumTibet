@@ -1,0 +1,35 @@
+.photo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        min-height: 250px;
+        min-width: 280px;
+    }
+
+    &__image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+    }
+
+    .f-carousel__slide {
+        padding-left: 10px;
+        flex: auto;
+        object-fit: cover;
+    }
+
+    button {
+        margin: 0 auto;
+    }
+}

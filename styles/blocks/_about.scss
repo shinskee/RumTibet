@@ -1,0 +1,48 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @include tablet-s {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        align-items: start;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 16px;
+
+        @include tablet-s {
+            align-items: start;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 260px);
+        grid-template-rows: repeat(2, 260px);
+
+        @include tablet-s {
+            display: none;
+        }
+    }
+
+    .section__inner {
+        width: 50%;
+
+        @include tablet-s {
+            width: 100%;
+            text-align: left;
+        }
+    }
+}

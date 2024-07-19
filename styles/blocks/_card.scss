@@ -1,0 +1,73 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    // overflow-x: scroll;
+
+    &__item {
+        padding-top: 20px;
+        min-width: 370px;
+        min-height: 500px;
+        border-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--bg-1 {
+            background: url('/src/card-1.svg');
+        }
+        &--bg-2 {
+            background: url('/src/card-2.svg');
+        }
+        &--bg-3 {
+            background: url('/src/card-3.svg');
+        }
+    }
+
+    // &__header {
+        
+    // }
+
+    &__raiting {
+        padding: 7px 11px;
+        align-self: flex-end;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px 0 0 4px;
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    &__inner {
+        padding: 25px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(6px);
+        border-radius: 0 0 32px 32px;
+    }
+
+    &__price {
+        @include fluid-text(24, 16);
+        color: var(--color-light);
+        font-weight: bold;
+        padding: 8px 16px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        font-size: 20px;
+    }
+
+    &__description {
+        font-size: 14px;
+        color: var(--color-light);
+    }
+
+    .f-carousel__slide {
+        margin-right: 13px;
+        flex: auto;
+        min-width: 370px;
+        min-height: 500px;
+    }
+}
