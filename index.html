@@ -20,12 +20,12 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Rum Tibet</title>
     <!-- GSAP - scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/libs/gsap/gsap.min.js" defer></script>
+    <script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
     <script src="/libs/gsap/ScrollSmoother.min.js" defer></script>
     <!-- Fancybox - carousel, gallery -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="/libs/fancybox/fancybox.umd.js" defer></script>
+    <script src="/libs/carousel/carousel.umd.js" defer></script>
     <script src="./main.js" defer></script>
 </head>
 <body>
@@ -68,7 +68,14 @@
                 </div>
                 <div class="finder container hidden-tablet">
                     <div class="finder__item">
-                        <input type="text" class="finder__input" placeholder="Локация для тура">
+                        <button class="finder__input dropdown__button" placeholder="Локация для тура">Локация для тура</button>
+                        <span class="dropdown__arrow-down"></span>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="lake">Озеро возле гор</li>
+                                <li class="dropdown__list-item" data-value="night">Ночь в горах</li>
+                                <li class="dropdown__list-item" data-value="yoga">Йога в горах</li>
+                            </ul>
+                            <input type="text" name="select-program" value="" class="dropdown__list-input visually-hidden">
                         <label for="" class="finder__label">выберите из списка</label>
                     </div>
                     <div class="finder__item">
@@ -369,7 +376,7 @@
         </div>
     </div>
 
-    <a class="scroll-top">
+    <a href="#main" class="scroll-top">
         <img src="/image/scroll-top.svg" alt="" width="50" height="50">
     </a>
 </body>

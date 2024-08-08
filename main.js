@@ -193,6 +193,48 @@ scrollTop.addEventListener('click', () => {
   })
 }
 
+//** Dropdown Header */
+
+const dropdownButton = document.querySelector('.dropdown__button')
+const dropdownList = document.querySelector('.dropdown__list')
+const dropdownItem = document.querySelectorAll('.dropdown__list-item')
+const dropdownInput = document.querySelector('.dropdown__list-input')
+const dropdownArrow = document.querySelector('.finder__item span')
+
+
+dropdownButton.addEventListener('click', () => {
+  dropdownList.classList.toggle('active')
+  dropdownArrow.classList.toggle('dropdown__arrow-up')
+})
+
+dropdownItem.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.stopPropagation()
+    dropdownButton.innerText = item.innerText
+    dropdownInput.value = item.dataset.value
+    dropdownList.classList.remove('active')
+    dropdownArrow.classList.remove('dropdown__arrow-up')
+    dropdownButton.focus()
+  })
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target !== dropdownButton) {
+    dropdownList.classList.remove('active')
+    dropdownArrow.classList.remove('dropdown__arrow-up')
+  }
+})
+
+//** Клик по клавише Tab и Escape */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab' || e.key === 'Escape') {
+    dropdownList.classList.remove('active')
+    dropdownArrow.classList.remove('dropdown__arrow-up')
+  }
+})
+
+
+
 
 
 

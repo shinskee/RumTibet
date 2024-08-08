@@ -32,15 +32,19 @@
             font-size: 16px;
         }
 
+        @include hover {
+            border-color: rgba(255, 255, 255, 0.73);
+        }
+
         &:focus {
+            outline: transparent;
+            box-shadow: 0 0 2px 0 black;
+            border-color: rgba(255, 255, 255, 0.73);
+
             &::placeholder {
                 color: transparent;
             }
         }
-    }
-
-    &__item {
-        width: 270px;
     }
 
     &__label {
@@ -58,5 +62,20 @@
         cursor: pointer;
         filter: invert(1);
     }
+
+    &__item {
+        position: relative;
+        width: 270px;
+
+        select {
+            option {
+                color: var(--color-accent);
+                background: transparent;
+            }
+        }
+    }
 }
 
+.active {
+
+}
